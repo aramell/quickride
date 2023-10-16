@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  /* color: rgb(var(--foreground-rgb)); */
+  background: linear-gradient(#3333, #5555);
+  background-repeat: no-repeat;
+  background-color: #3333;
+  background-size: 100%;
+  background-image: url("./wheel-image.jpg");
+}
+
+@layer components {
+  .card {
+    background-color: theme("colors.blue.100");
+    border-radius: theme("borderRadius.lg");
+    padding: theme("spacing.6");
+    box-shadow: theme("boxShadow.xl");
+  }
+}
