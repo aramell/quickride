@@ -46,8 +46,9 @@ export default function Home() {
             getCoordinates={getCoordinates}
             getResturants={resturantResults}
           />
-        </Suspense>
+        
         <Map />
+        </Suspense>
       </div>
     </main>
   );
