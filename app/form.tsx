@@ -27,7 +27,6 @@ const AddressForm = ({
 
   const handleResturantSearch = async (address: string) => {
     const { lat, lng } = await getCoordinates(address);
-    console.log(lat, lng, "coords");
     const resturants = await getResturants(address as string);
     setResturantResults(resturants);
     router.push(`/?lat=${lat}&lng=${lng}&address=${address}`);

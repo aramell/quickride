@@ -41,7 +41,7 @@ export default function Home() {
         </div>
       </div>
       <div className="flex align-top">
-        <Suspense fallback={<div>Loading..ddd.</div>}>
+        <Suspense fallback={<div>Loading....</div>}>
           <AddressForm
             getCoordinates={getCoordinates}
             getResturants={resturantResults}
