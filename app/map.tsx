@@ -10,7 +10,7 @@ const Map = () => {
     lng: Number(searchparams.get("lng")),
   };
   const { isLoaded } = useJsApiLoader({
-    googleMapsApiKey: process.env.GOOGLE_MAPS_API_KEY ?? "",
+    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY ?? "",
   });
 
   if (!isLoaded || (!coordinates.lat && !coordinates.lng)) return null;

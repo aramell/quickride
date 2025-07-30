@@ -44,18 +44,18 @@ const AddressForm = ({
         <form onSubmit={handleSubmit}>
           <>
             <label htmlFor="address" className="">
-              Address:
+              Enter an address:
             </label>
             <div className="flex items-center justify-center">
               <input
                 className="px-4 py-2 border rounded-md w-full"
                 type="text"
                 id="address"
-                placeholder="Enter a location"
+                placeholder="address, city, state, zip"
               />
               <button
                 type="submit"
-                className="mt-2 bg-blue-500 text-white px-4 py-2 rounded-md"
+                className="ml-2 bg-blue-500 text-white px-4 py-2 rounded-md"
               >
                 Go
               </button>

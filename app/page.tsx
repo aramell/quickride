@@ -36,7 +36,7 @@ export default function Home() {
         </header>
         <div className=" mt-5 flex flex-col">
           <h1 className="text-xl font-bold text-center">
-            What can I bike to in 15 minutes?
+            What restaurants can I bike to in 15 minutes?
           </h1>
         </div>
       </div>

@@ -15,14 +15,9 @@ const findResturants = (coords: any) => {
 };
 
 const coordinates = async (address: any) => {
-  const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=${process.env.GOOGLE_MAPS_API_KEY}`;
+  const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}`;
   const res = await fetch(url);
 
-  if (!res.ok) {
-    throw new Error("Failed to fetch coordinates. Please try again!");
-  }
-
-  
   const json = await res.json();
   return json.results[0].geometry.location;
 };
@@ -33,7 +28,6 @@ const getResturants = async (address: FormDataEntryValue) => {
   if (!coords) {
     throw new Error("Coordinates not found for the given address.");
   }
-  console.log('resturantslist call')
   let resturantsList = await (await findResturants(coords)).json();
   console.log(resturantsList, 'fdsjfkldajflksjlflaksd')
   const resturants = resturantsList.features.map(
